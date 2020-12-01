@@ -8,33 +8,40 @@ namespace grafos
         static void Main(string[] args)
         {
 
-            //A,B,C,D
+            ////A,B,C,D
 
-            //Vertical
+            ////Vertical
             List<ListaLigada> Grafo = new List<ListaLigada>();
 
             //Horizontal
-            ListaLigada verticeA = new ListaLigada();
-            ListaLigada verticeE = new ListaLigada();
-            ListaLigada verticeI = new ListaLigada();
-            ListaLigada verticeO = new ListaLigada();
-            ListaLigada verticeU = new ListaLigada();
+            ListaLigada verticeA = new ListaLigada("A");
+;
+            ListaLigada verticeE = new ListaLigada("E");
+
+            ListaLigada verticeI = new ListaLigada("I");
+
+            ListaLigada verticeO = new ListaLigada("O");
+
+            ListaLigada verticeU = new ListaLigada("U");
+
 
             //Relacionar nodos
-            //verticeA.Relacionar(verticeE);
-            //verticeA.Relacionar(verticeI);
-            //verticeE.Relacionar(verticeO);
-            //verticeI.Relacionar(verticeU);
-            //verticeO.Relacionar(verticeI);
-            //verticeO.Relacionar(verticeI);
-            //verticeU.Relacionar(verticeA);
-            //verticeU.Relacionar(verticeO);
+            verticeA.Relacionar(verticeE);
+            verticeA.Relacionar(verticeI);
+            verticeE.Relacionar(verticeO);
+            verticeI.Relacionar(verticeU);
+            verticeO.Relacionar(verticeI);
+            verticeO.Relacionar(verticeI);
+            verticeU.Relacionar(verticeA);
+            verticeU.Relacionar(verticeO);
 
             Grafo.Add(verticeA);
             Grafo.Add(verticeE);
             Grafo.Add(verticeI);
             Grafo.Add(verticeO);
             Grafo.Add(verticeU);
+
+            Console.ReadKey();
 
         }
     }

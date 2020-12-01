@@ -18,5 +18,6 @@ namespace grafos
             this.dato = dato;
             this.enlace = enlace;
         }
+
     }
 }

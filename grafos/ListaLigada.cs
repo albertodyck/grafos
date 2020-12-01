@@ -9,14 +9,16 @@ namespace grafos
         private Nodo nodoInicial;
         private Nodo nodoActual;
 
-        public ListaLigada()
+        public ListaLigada(string dato = null)
         {
-            nodoInicial = new Nodo();
+            nodoInicial = new Nodo(dato);
+            //por definicion al no dar el enlace, la clase nodo lo hace null por ello la siguiente linea no es necesaria
+            //nodoInicial.Enlace = null;
         }
 
-        public void Relacionar(Nodo nodoEnlace) 
+        public void Relacionar(ListaLigada listaLigada) 
         {
-
+            AgregarNodo(listaLigada.nodoInicial.Dato);
         }
 
         public void AgregarNodo(string dato)
